@@ -45,3 +45,6 @@ https://www.reddit.com/r/learnmachinelearning/comments/w4hi1x/comment/ih2fn7w/
 https://medium.com/@danilo.najkov/detecting-political-bias-in-online-articles-using-nlp-and-classification-models-c1a40ec3989b
 
 
+Instructions
+- To run 
+pip install -r requirements.txt
