@@ -7,27 +7,36 @@ News Sources by Political Affiliation
 https://www.allsides.com/media-bias/media-bias-chart
 
 
-Blue
+Blue:
+< br / >
 NY Times
+< br / >
 CNN
-NBC 
-ABC
-CBS
-TIME
-Washington Post
-Bloomberg
+< br / >
+(NBC, 
+ABC, 
+CBS, 
+TIME, 
+Washington Post, 
+Bloomberg)
 
-Neutral
+Neutral:
+< br / >
 Yahoo
+< br / >
 BBC News
-Forbes
-Wall Street Journal (news)
+< br / >
+(Forbes, 
+Wall Street Journal (news))
 
-Red
+Red:
+< br / >
 Fox News
+< br / >
 New York Post
-The Daily Wire
-The Federalist
+< br / >
+(The Daily Wire, 
+The Federalist)
 
 
 
