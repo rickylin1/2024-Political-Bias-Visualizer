@@ -8,11 +8,11 @@ https://www.allsides.com/media-bias/media-bias-chart
 
 
 Blue:
-< br / >
+< br >
 NY Times
-< br / >
+< br >
 CNN
-< br / >
+< br >
 (NBC, 
 ABC, 
 CBS, 
@@ -21,20 +21,20 @@ Washington Post,
 Bloomberg)
 
 Neutral:
-< br / >
+< br >
 Yahoo
-< br / >
+< br >
 BBC News
-< br / >
+< br >
 (Forbes, 
 Wall Street Journal (news))
 
 Red:
-< br / >
+< br >
 Fox News
-< br / >
+< br >
 New York Post
-< br / >
+< br >
 (The Daily Wire, 
 The Federalist)
 
