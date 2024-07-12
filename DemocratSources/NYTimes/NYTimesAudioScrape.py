@@ -4,10 +4,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import requests
 from bs4 import BeautifulSoup
-import time
 import re
+import os
+
 
 try:
     driver = webdriver.Chrome()  # Assuming chromedriver is in your PATH
@@ -60,9 +60,23 @@ try:
                 audio_src = audio_tag['src']
                 audio_links.append(audio_src)
 
-        print(f"Visiting: {page_link}")
+        # print(f"Visiting: {page_link}")
     
     print(audio_links)
+    script_dir = os.path.dirname(os.path.realpath(__file__))
+    file_path = os.path.join(script_dir, 'urls.txt')
+
+    # Check if the file already exists
+    if not os.path.exists(file_path):
+        # If it doesn't exist, create it and write the URLs
+        with open(file_path, 'w') as f:
+            for url in audio_links:
+                f.write(url + '\n')
+    else:
+        print(f"The file '{file_path}' already exists. Skipping creation.")
+
+    # Optionally, print a message indicating where the file was saved
+    print(f"URLs written to '{file_path}'.")
 
     print('done')
 
