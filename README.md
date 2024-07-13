@@ -6,6 +6,12 @@ Scrape all news orgs and determine overall political climate
 News Sources by Political Affiliation
 https://www.allsides.com/media-bias/media-bias-chart
 
+Democratic Values
+https://democrats.org/where-we-stand/party-platform/
+
+Republican Values
+https://prod-cdn-static.gop.com/media/documents/DRAFT_12_FINAL%5B1%5D-ben_1468872234.pdf
+
 
 Blue:
 <br>
