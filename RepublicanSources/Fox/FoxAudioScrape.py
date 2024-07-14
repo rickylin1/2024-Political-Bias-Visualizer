@@ -8,41 +8,38 @@ from bs4 import BeautifulSoup
 import re
 import os
 import time
+import YTScrape
 
 
 try:
     driver = webdriver.Chrome()  
-    url = "https://www.cnn.com/audio/podcasts/inside-politics"
+    url = "https://www.youtube.com/@FoxNews/videos"
     driver.get(url)
-    load_more_button = WebDriverWait(driver, 3).until(
-        EC.element_to_be_clickable((By.ID, "load-more"))
-    )
+    #scroll to get videos from past week give or take
+    scroll_count = 10
+    while scroll_count > 0:
+        driver.execute_script('window.scrollBy(0, window.innerHeight);')
+        scroll_count -= 1
 
-    for i in range(3):
-        driver.execute_script("arguments[0].scrollIntoView();", load_more_button)
-        load_more_button = WebDriverWait(driver, 3).until(
-            EC.element_to_be_clickable((By.ID, "load-more"))
-        )
-        load_more_button.click()
+    time.sleep(10)
 
-    print("Clicked on the 'Show more episodes' button")
+
 
      # Get the page source after waiting
     webpage_content = driver.page_source
 
-    # Parse the webpage content with BeautifulSoup
     soup = BeautifulSoup(webpage_content, 'html.parser')
-    elements = soup.find_all(class_='episode')
+
+    elements = soup.find_all(id='video-title-link') 
 
     audio_urls = []
 
     for element in elements:
-        src = element.get('src')
-        if src:
-            audio_urls.append(src)
-
-    print(audio_urls)
-
+        href = element.get('href')
+        if href:
+            youtube_url = "https://www.youtube.com" + href
+            mp3_url = YTScrape.get_mp3_url(youtube_url)
+            audio_urls.append(mp3_url)
 
     script_dir = os.path.dirname(os.path.realpath(__file__))
     file_path = os.path.join(script_dir, 'urls.txt')
