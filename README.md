@@ -3,14 +3,9 @@
 Track political biases of news organizations (Track the level of bias of Fox over the years)
 Scrape all news orgs and determine overall political climate
 
-News Sources by Political Affiliation
-https://www.allsides.com/media-bias/media-bias-chart
-
-Democratic Values
-https://democrats.org/where-we-stand/party-platform/
-
-Republican Values
-https://prod-cdn-static.gop.com/media/documents/DRAFT_12_FINAL%5B1%5D-ben_1468872234.pdf
+- [News Sources by Political Affiliation](https://www.allsides.com/media-bias/media-bias-chart)
+- [Democratic Values](https://democrats.org/where-we-stand/party-platform/)
+- [Republican Values](https://prod-cdn-static.gop.com/media/documents/DRAFT_12_FINAL%5B1%5D-ben_1468872234.pdf)
 
 
 Blue:
@@ -46,18 +41,14 @@ The Federalist)
 
 
 
-Whisper API
-https://github.com/openai/whisper
-
-Deepgram API? Price: $0.25/audio hour
-https://deepgram.com/
-
-Google API? Price $1/audio hr
-https://cloud.google.com/speech-to-text?hl=en
+[Whisper API](https://github.com/openai/whisper)
 
 
-https://www.reddit.com/r/learnmachinelearning/comments/w4hi1x/comment/ih2fn7w/
-https://medium.com/@danilo.najkov/detecting-political-bias-in-online-articles-using-nlp-and-classification-models-c1a40ec3989b
+[Deepgram API?](https://deepgram.com/) Price: $0.25/audio hour
+
+
+[Google API?](https://cloud.google.com/speech-to-text?hl=en) Price $1/audio hr
+
 
 
 Instructions
