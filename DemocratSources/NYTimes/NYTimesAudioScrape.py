@@ -10,49 +10,35 @@ import os
 
 
 try:
-    driver = webdriver.Chrome()  # Assuming chromedriver is in your PATH
+    driver = webdriver.Chrome()  
     url = "https://www.nytimes.com/column/the-headlines"
-
-    # Open the New York Times audio page directory
     driver.get(url)
 
     WebDriverWait(driver, 3).until(EC.presence_of_all_elements_located((By.TAG_NAME, 'a')))
 
-     # Get the page source after waiting
     webpage_content = driver.page_source
 
-    # Parse the webpage content with BeautifulSoup
     soup = BeautifulSoup(webpage_content, 'html.parser')
 
     # Find all anchor tags with href containing "podcasts" and ending with ".html"
     anchors = soup.find_all('a', href=re.compile(r'podcasts.*\.html$'))
 
-    # Print the href attributes of the found anchor tags
     audio_links = []
     for anchor in anchors:
         page_link = "https://www.nytimes.com" + anchor['href']
         driver.get(page_link)
         
         try:
-            
             button = WebDriverWait(driver, 10).until(
             EC.element_to_be_clickable((By.XPATH, '//button[@title="Play Audio" and @aria-label="Play Audio"]')))
-            # Click the button
             button.click()
-
-            # Wait for the audio element to appear after clicking the button
             WebDriverWait(driver, 2).until(EC.presence_of_all_elements_located((By.TAG_NAME, 'audio')))
         
         except Exception as e:
             print(f"An error occurred: {e}")
         
-        # Get the page source after waiting
         page_content = driver.page_source
-
-        # Parse the new page content with BeautifulSoup
         page_soup = BeautifulSoup(page_content, 'html.parser')
-
-        # Find the audio tag and extract its src attribute
         audio_tags = page_soup.find_all('audio')
         
         for audio_tag in audio_tags:
@@ -75,12 +61,10 @@ try:
     else:
         print(f"The file '{file_path}' already exists. Skipping creation.")
 
-    # Optionally, print a message indicating where the file was saved
     print(f"URLs written to '{file_path}'.")
 
     print('done')
 
-# Close the browser
 finally:
     print('quit')
     driver.quit()
