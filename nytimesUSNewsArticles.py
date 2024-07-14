@@ -121,6 +121,11 @@ try:
                 # Generate filename from the original NYT URL
                 filename = title + ".txt"
                 file_path = os.path.join("nytimesUSNews", filename)
+
+                # Check if the file already exists
+                if os.path.exists(file_path):
+                    print(f"Article already exists: {file_path}")
+                    continue  # Skip to the next article
                 
                 # Save the article text
                 with open(file_path, 'w', encoding='utf-8') as file:
