@@ -7,6 +7,7 @@ Scrape all news orgs and determine overall political climate
 - [Democratic Values](https://democrats.org/where-we-stand/party-platform/)
 - [Republican Values](https://prod-cdn-static.gop.com/media/documents/DRAFT_12_FINAL%5B1%5D-ben_1468872234.pdf)
 
+General: https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_20newsgroups.html
 
 Blue:
 <br>
